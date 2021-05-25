@@ -41,7 +41,7 @@ router.patch('/:id', async(req,res)=>{
             const seat = await SEAT.findById(req.params.id)
             seat.seatno = req.body.seatno,
             seat.slot = req.body.slot,
-            seat.time = req.body.type,
+            seat.time = req.body.time,
             seat.QR = req.body.qr
             const a1=await seat.save()
             res.json(a1)
